@@ -8,6 +8,7 @@ const userRouter = require('./routers/userRouter');
 const authRouter = require('./routers/authRouter')
 const courseRouter = require('./routers/courseRouter');
 const videoRouter = require('./routers/videoRouter');
+const path = require('path');
 
 
 app.use(express.json({ limit: '10mb' }));
@@ -20,6 +21,8 @@ app.use('/api/courses/videos', videoRouter);
 app.get('/', (req, res) => {
     console.log("Hello from world");
 })
+
+// const path=require(path)
 
 
 if (process.env.NODE_ENV === 'production') {
